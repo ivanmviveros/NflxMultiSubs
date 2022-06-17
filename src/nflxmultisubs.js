@@ -455,7 +455,7 @@ class SubtitleFactory {
     const targetProfile = 'dfxp-ls-sdh';
     const d = track.ttDownloadables[targetProfile];
     if (!d) {
-      console.error(`Cannot find "${targetProfile}" for ${lang}`);
+      console.debug(`Cannot find "${targetProfile}" for ${lang}`);
       return null;
     }
     const urls = Object.values(d.downloadUrls);
