@@ -471,7 +471,8 @@ const buildSubtitleList = textTracks => {
   // sorted by language in alphabetical order (to align with official UI)
   const subs = textTracks
     .filter(t => !SubtitleFactory.isNoneTrack(t))
-    .map(t => SubtitleFactory.build(t));
+    .map(t => SubtitleFactory.build(t))
+    .filter(t => t !== null);
   return subs.concat(dummy);
 };
 
